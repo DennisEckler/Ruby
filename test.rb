@@ -1,5 +1,5 @@
 puts "Enter 'yes' or 'no'"
-
+// sheeeeesh
 response = gets.chomp
 
 if response == "yes"
