@@ -69,12 +69,18 @@ def name_and_population
   FROM
     countries
   WHERE
-    name = 'France' AND 'Germany' OR "Italy"
+    name='France' OR name='Germany' OR name='Italy'
   SQL
 end
 
 def united_we_stand
   # Show the countries that have a name that includes the word 'United'
   execute(<<-SQL)
+  SELECT
+    name
+  FROM
+    countries
+  WHERE
+    name LIKE 'United %'
   SQL
 end
